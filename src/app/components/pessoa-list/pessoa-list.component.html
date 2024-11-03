@@ -2,8 +2,12 @@
   <mat-card>
     <mat-card-header>
       <mat-card-title>Lista de Pessoas</mat-card-title>
-      <button mat-raised-button color="primary" (click)="novaPessoa()">
-        <mat-icon>add</mat-icon>
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="novaPessoa()"
+        class="nova-pessoa-button"
+      >
         Nova Pessoa
       </button>
     </mat-card-header>
@@ -16,7 +20,6 @@
           (keyup)="applyFilter($event)"
           placeholder="Digite para buscar..."
         />
-        <mat-icon matSuffix>search</mat-icon>
       </mat-form-field>
 
       <div class="table-container mat-elevation-z2">
@@ -56,7 +59,7 @@
                 (click)="editPessoa(pessoa)"
                 matTooltip="Editar"
               >
-                <mat-icon>edit</mat-icon>
+                <mat-icon>🖊️</mat-icon>
               </button>
               <button
                 mat-icon-button
@@ -64,7 +67,7 @@
                 (click)="deletePessoa(pessoa)"
                 matTooltip="Excluir"
               >
-                <mat-icon>delete</mat-icon>
+                <mat-icon>❌</mat-icon>
               </button>
             </td>
           </ng-container>
