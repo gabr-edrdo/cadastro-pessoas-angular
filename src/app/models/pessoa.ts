@@ -1,10 +1,13 @@
-import { Endereco } from './endereco';
-
 export interface Pessoa {
-    id?: number;
-    nome: string;
-    cpf: string;
-    email: string;
-    telefone: string;
-    endereco: Endereco;
+  id?: number;
+  nome: string;
+  dataNascimento: string;
+  cpf: string;
+  cep: string;
+  logradouro: string;
+  numero: string;
+  complemento?: string;
+  bairro: string;
+  cidade: string;
+  estado: string;
 }
